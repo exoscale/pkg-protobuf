@@ -14,19 +14,18 @@ Build-Depends:
  , debhelper (>= 9)
  , dh-autoreconf
 # C/C++
- , g++ (>= 4:4.7)
  , zlib1g-dev
  , google-mock
  , libgtest-dev
 # Python
  , dh-python
- , python-all (>= 2.7)
- , libpython-all-dev (>= 2.7)
- , python3-all (>= 3.3)
- , libpython3-all-dev (>= 3.3)
+ , python-all:any
+ , libpython-all-dev
+ , python3-all:any
+ , libpython3-all-dev
  , python-setuptools
+ , python-six
  , python3-setuptools
- , python-google-apputils
  , python3-six
 # Manpage generator
  , xmlto
