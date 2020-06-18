@@ -2,9 +2,9 @@ Description: Fix two tests with Python 3.6
 Author: Michael Hudson-Doyle <michael.hudson@ubuntu.com>
 Origin: vendor
 Bug: https://github.com/google/protobuf/issues/3037
-Last-Update: 2017-05-12
----
-This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Bug-Debian: https://bugs.debian.org/862805
+Last-Update: 2017-10-16
+
 --- a/python/google/protobuf/internal/json_format_test.py
 +++ b/python/google/protobuf/internal/json_format_test.py
 @@ -753,7 +753,7 @@
