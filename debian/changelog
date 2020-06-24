@@ -1,3 +1,50 @@
+protobuf (3.0.0-9.1ubuntu1+exo1~xenial) UNRELEASED; urgency=low
+
+  * Backport from Bionic to Xenial (incl. Python 3 support)
+
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Thu, 18 Jun 2020 12:52:50 +0200
+
+protobuf (3.0.0-9.1ubuntu1) bionic; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - Run jdbc-tests autopkg test allowing output on stderr (warning with
+      illegal reflective access operation on OpenJDK 9).
+    - Backport upstream fix to hide unnecessary exported symbols
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 30 Mar 2018 11:08:42 +0200
+
+protobuf (3.0.0-9.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Mattia Rizzolo ]
+  * Apply patch from Ubuntu to fix tests with Python 3.6.  Closes: #862805
+  * Add missing Build-Depends on python-six.
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS:
+    + Remove unneeded versioned Build-Depends on g++ (satisfied in oldstable).
+    + Remove unused Build-Depends on python-google-apputils.
+    + Build-Depend on python(3)-all-dev instead of python(3)-all +
+      libpython(3)-all-dev.
+    + Run generate_descriptor_proto.sh on a native build before performing
+      the actual cross build.
+    + Save the native protoc in debian/native_protoc/ and pass it to the
+      cross build via --with-protoc.
+    + Set up environment variables for cross building python extensions.
+    + Fix the loops used for the python(3) builds install and tests, to
+      actually build for all python versions and tests them all.
+    + Closes: #846343
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 16 Oct 2017 13:34:16 +0200
+
+protobuf (3.0.0-9ubuntu6) bionic; urgency=medium
+
+  * Run jdbc-tests autopkg test allowing output on stderr (warning with
+    illegal reflective access operation on OpenJDK 9).
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 29 Mar 2018 15:39:23 +0800
+
 protobuf (3.0.0-9ubuntu5~xenial0+exo1) xenial; urgency=medium
 
   * Backport for Xenial.
